@@ -13,7 +13,7 @@ contract SnailX is ERC721, Ownable {
     constructor() ERC721("SnailX", "SNLX") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/QmYBacjgvJzWZRtds7Prdi3xdosQtG1EDNkGcHS6oYj6gn/";
+        return "ipfs://QmYBacjgvJzWZRtds7Prdi3xdosQtG1EDNkGcHS6oYj6gn/";
     }
 
     function safeMint(address to) public onlyOwner {
@@ -22,3 +22,4 @@ contract SnailX is ERC721, Ownable {
         _safeMint(to, tokenId);
     }
 }
+
